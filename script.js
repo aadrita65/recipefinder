@@ -5,6 +5,10 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
 
 searchBtn.addEventListener('click', getMealList);
+mealList.addEventListener('click', getMealRecipe);
+recipeCloseBtn.addEventListener('click', () => {
+    mealDetailsContent.parentElement.classList.remove('showRecipe');
+});
 
 function getMealList(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
